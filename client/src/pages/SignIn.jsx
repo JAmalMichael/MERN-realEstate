@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import {useDispatch, useSelector } from 'react-redux'; 
 import { signInStart, signInSuccess, signInFailure } from '../redux/user/userSlice';
+import OAuth from '../components/OAuth';
 
 function SignIn() {
         const [formData, setFormData] = useState({})
@@ -70,6 +71,7 @@ function SignIn() {
                     Loading... <AiOutlineLoading3Quarters /> 
               </div>
               : 'Sign in'}</button>
+              <OAuth />
         </form>
         <div className='flex gap-2 mt-5'>
           <p>Dont have an account?</p>
